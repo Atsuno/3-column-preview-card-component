@@ -25,7 +25,7 @@ const Cars = (props: Props) => {
           </h1>
           <p className={`${lexendDeca.className} text-paragraphs`}>{detail}</p>
           <button
-            className={`${colorTextButton} w-fit rounded-3xl bg-rear px-7 py-3 font-bold`}
+            className={`${colorTextButton} active:bg-transparent w-fit rounded-3xl border-[1px] bg-rear px-7 py-3 font-bold active:text-rear`}
           >
             Learn More
           </button>
@@ -35,7 +35,7 @@ const Cars = (props: Props) => {
   )
   return (
     <section
-      className={`boxRounded flex flex-col md:flex-row first:[&_button]:text-primaly`}
+      className={`boxRounded flex flex-col md:flex-row first:[&_button]:text-primaly `}
     >
       {carList}
     </section>

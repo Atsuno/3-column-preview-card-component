@@ -1,7 +1,7 @@
 const Foolter = () => {
   return (
-    <footer className="text-center text-sm [&_a]:text-link">
-      Challenge by
+    <footer className="pt-5 text-center text-sm [&_a]:text-link">
+      Challenge by{' '}
       <a
         href="https://www.frontendmentor.io?ref=challenge"
         rel="noopener"
@@ -10,8 +10,13 @@ const Foolter = () => {
       >
         Frontend Mentor
       </a>
-      . Coded by
-      <a href="https://github.com/Atsuno" rel="noopener " role="button">
+      . Coded by{' '}
+      <a
+        href="https://github.com/Atsuno"
+        rel="noopener "
+        role="button"
+        target="_blank"
+      >
         Atsuno
       </a>
       .
