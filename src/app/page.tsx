@@ -1,11 +1,12 @@
-import Cars from '@/Components/Cars'
-import Foolters from '@/Components/Foolter'
+import Cars from '@/components/Cars'
+import dataCars from '@/components/DataCars'
+import Foolter from '@/components/Foolter'
 
 const Home = () => {
   return (
-    <main>
-      <Cars />
-      <Foolters />
+    <main className="md:max-w-4xl">
+      <Cars dataCars={dataCars} />
+      <Foolter />
     </main>
   )
 }

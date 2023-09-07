@@ -1,8 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-rear`}>{children}</body>
+      <body
+        className={`flex min-h-screen justify-center bg-rear pt-20 md:items-center md:p-0`}
+      >
+        {children}
+      </body>
     </html>
   )
 }

@@ -3,5 +3,25 @@
 @tailwind utilities;
 
 html {
-  font-size: 13px;
+  font-size: 15px;
+}
+
+.boxRounded>div:first-child {
+  @apply rounded-t-xl
+}
+
+.boxRounded>div:last-child {
+  @apply rounded-b-xl
+}
+
+@screen sm {
+
+  .boxRounded>div:first-child {
+    @apply rounded-none rounded-l-xl
+  }
+
+  .boxRounded>div:last-child {
+    @apply rounded-none rounded-r-xl
+  }
+
 }

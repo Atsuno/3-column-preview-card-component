@@ -1,27 +1,43 @@
-const Cars = () => {
+import { DataCar } from '@/components/DataCars'
+import { bigShouldersDisplay, lexendDeca } from '@/libs/fonts'
+
+type Props = {
+  dataCars: Array<DataCar>
+}
+
+const Cars = (props: Props) => {
+  const { dataCars } = props
+
+  const carList = dataCars.map(
+    ({ name, detail, image, imageAlt, colorbg, colorTextButton }) => {
+      return (
+        <div
+          key={name}
+          className={`${colorbg} flex flex-col gap-7 px-14 py-12`}
+        >
+          <picture>
+            <img src={image} alt={imageAlt} />
+          </picture>
+          <h1
+            className={`${bigShouldersDisplay.className} text-3xl uppercase text-paragraphs`}
+          >
+            {name}
+          </h1>
+          <p className={`${lexendDeca.className} text-paragraphs`}>{detail}</p>
+          <button
+            className={`${colorTextButton} w-fit rounded-3xl bg-rear px-7 py-3 font-bold`}
+          >
+            Learn More
+          </button>
+        </div>
+      )
+    },
+  )
   return (
-    <section>
-      <div>
-        <h1>Sedans</h1>
-        <p>
-          Choose a sedan for its affordability and excellent fuel economy. Ideal
-          for cruising in the city or on your next road trip.
-        </p>
-      </div>
-      <div>
-        <h1>SUVs</h1>
-        <p>
-          Take an SUV for its spacious interior, power, and versatility. Perfect
-          for your next family vacation and off-road adventures.
-        </p>
-      </div>
-      <div>
-        <h1>Luxury</h1>
-        <p>
-          Cruise in the best car brands without the bloated prices. Enjoy the
-          enhanced comfort of a luxury rental and arrive in style.
-        </p>
-      </div>
+    <section
+      className={`boxRounded flex flex-col md:flex-row first:[&_button]:text-primaly`}
+    >
+      {carList}
     </section>
   )
 }

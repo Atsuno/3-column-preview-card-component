@@ -1,7 +1,7 @@
-const Foolters = () => {
+const Foolter = () => {
   return (
-    <footer>
-      Challenge by{' '}
+    <footer className="text-center text-sm [&_a]:text-link">
+      Challenge by
       <a
         href="https://www.frontendmentor.io?ref=challenge"
         rel="noopener"
@@ -19,4 +19,4 @@ const Foolters = () => {
   )
 }
 
-export default Foolters
+export default Foolter
